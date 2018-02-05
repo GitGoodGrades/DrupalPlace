@@ -1,0 +1,3 @@
+name = time_comp
+core = 7.x
+description = allows for comparison of time spans and conditions to prevent overlaps. (for example reservations)

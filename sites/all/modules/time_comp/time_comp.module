@@ -1,0 +1,23 @@
+<?php
+
+function time_comp_entity_presave($entity, $type) {
+	//Retrieve the submitted time frame and store them into the varialbe
+	$reservationtime = $entity->field_time;
+	$starttime = $reservationtime['und'][0]['value'];
+	$endtime = $reservationtime['und'][0]['value2'];
+	
+	//Querry Reservation Datase on the selected date and classroom
+	//We then loop through the results to make sure there are no time conflicts
+	
+	
+	// Will use this line of code to halt create of Reservation if there is a time conflict
+	// throw new \Exception(t('Fields are not unique!'));
+	
+	$entity->title = $entity->title . $starttime;
+}
+
+function overlap($start1, $end1, $start2, $end2) {
+	//test two times and determins if there is conflict
+}
+
+?>
